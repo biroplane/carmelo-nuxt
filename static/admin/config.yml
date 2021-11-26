@@ -1,0 +1,71 @@
+backend:
+  name: git-gateway
+
+media_folder: public/img
+public_folder: /img
+
+collections:
+  - name: "products"
+    label: "Products"
+    folder: "content/products"
+    format: "frontmatter"
+    fields:
+      - { name: "id", label: "ID", widget: "string" }
+      - { name: "title", label: "Title", widget: "string" }
+
+      - { name: "type", label: "Type", widget: "string" }
+      - { name: "status", label: "Status", widget: "string" }
+      - { name: "featured", label: "Featured", widget: "boolean" }
+      - { name: "visible", label: "Visible", widget: "boolean" }
+      - { name: "excerpt", label: "Excerpt", widget: "text" }
+      - { name: "description", label: "Description", widget: "markdown" }
+      - { name: "price", label: "Price", widget: "number" }
+      - {
+          name: "categories",
+          label: "Categories",
+          widget: "relation",
+          collection: "categories",
+          value_field: "id",
+          search_fields: ["title"],
+        }
+      - {
+          name: "tags",
+          label: "Tags",
+          widget: "relation",
+          collection: "tags",
+          value_field: "id",
+          search_fields: ["title"],
+        }
+      - { name: "images", label: "Images", widget: "image" }
+      - { name: "order", label: "Order", widget: "number" }
+  - name: "categories"
+    label: "Categories"
+    folder: "content/categories"
+    format: "frontmatter"
+    fields:
+      - { name: "id", label: "ID", widget: "string" }
+      - { name: "title", label: "Title", widget: "string" }
+
+      - { name: "featured", label: "Featured", widget: "boolean" }
+      - { name: "visible", label: "Visible", widget: "boolean" }
+      - { name: "images", label: "Images", widget: "image" }
+      - { name: "description", label: "Description", widget: "markdown" }
+  - name: "tags"
+    label: "Tags"
+    folder: "content/tags"
+    format: "frontmatter"
+    fields:
+      - { name: "id", label: "ID", widget: "string" }
+      - { name: "title", label: "Title", widget: "string" }
+
+      - { name: "featured", label: "Featured", widget: "boolean" }
+      - { name: "visible", label: "Visible", widget: "boolean" }
+      - { name: "images", label: "Images", widget: "image" }
+      - { name: "description", label: "Description", widget: "markdown" }
+  - name: "ingredients"
+    label: "Ingredients"
+    folder: "content/ingredients"
+    format: "frontmatter"
+    fields:
+      - { name: "id", label: "ID", widget: "string" }
+      - { name: "title", label: "Title", widget: "string" }
