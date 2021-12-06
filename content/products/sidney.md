@@ -5,6 +5,7 @@ date_created: 2021-05-27T23:06:02
 date_modified: 2021-05-28T09:17:32
 slug: sidney
 type: simple
+visible: true
 attibutes: 
 variations:
 featured: false

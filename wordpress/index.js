@@ -64,9 +64,8 @@ const getPosts = async (page) => {
     params: {
       per_page: pageSize,
       page,
-      _embed: true,
+      _embed: true
       // modified_after: latest,
-      catalog_visibility: 'hidden'
     },
     auth: {
       username: process.env.WOOCOMMERCE_USER,
@@ -97,12 +96,15 @@ const init = () => {
   getPosts(page).then((_posts) => {
     // console.log(`Attendo posts `, _posts.length)
     page = 0
-    const _real = _posts.filter((post) => post.catalog_visibility === 'visible')
-    console.log(
-      `Posts trovati `,
-      _real.filter((c) => c.id === 2227)
-    )
-    const _chips = _real.filter((c) => c.id === 2227)
+    const _real = _posts.map((post) => ({
+      visible: post.catalog_visibility === 'visible',
+      ...post
+    }))
+    // console.log(
+    //   `Posts trovati `,
+    //   _real.filter((c) => c.id === 2227)
+    // )
+    const _chips = _posts.filter((c) => c.id === 2227)
     fs.writeFileSync(
       path.join(__dirname, 'prod.json'),
       JSON.stringify(_chips[0])

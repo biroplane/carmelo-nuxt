@@ -5,6 +5,7 @@ date_created: 2021-04-04T17:05:14
 date_modified: 2021-04-12T05:03:59
 slug: fanta
 type: simple
+visible: true
 attibutes: 
 variations:
 featured: false

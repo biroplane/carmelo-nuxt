@@ -5,6 +5,7 @@ date_created: 2021-04-04T17:04:44
 date_modified: 2021-04-30T17:37:47
 slug: veg-bombs
 type: simple
+visible: true
 attibutes: 
 variations:
 featured: false

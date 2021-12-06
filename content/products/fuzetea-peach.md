@@ -5,6 +5,7 @@ date_created: 2021-04-04T17:05:15
 date_modified: 2021-04-12T04:43:35
 slug: fuzetea-peach
 type: simple
+visible: true
 attibutes: 
 variations:
 featured: false

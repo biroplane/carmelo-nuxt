@@ -5,6 +5,7 @@ date_created: 2021-04-04T17:04:45
 date_modified: 2021-04-14T19:17:42
 slug: classic-2015
 type: simple
+visible: true
 attibutes: 
 variations:
 featured: true

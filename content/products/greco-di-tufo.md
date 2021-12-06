@@ -5,6 +5,7 @@ date_created: 2021-04-04T17:05:33
 date_modified: 2021-04-11T06:37:30
 slug: greco-di-tufo
 type: simple
+visible: true
 attibutes: 
 variations:
 featured: false

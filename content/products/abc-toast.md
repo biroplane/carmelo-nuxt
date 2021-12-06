@@ -5,6 +5,7 @@ date_created: 2021-04-04T17:05:00
 date_modified: 2021-04-14T16:14:55
 slug: abc-toast
 type: simple
+visible: true
 attibutes: 
 variations:
 featured: false

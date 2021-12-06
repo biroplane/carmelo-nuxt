@@ -5,6 +5,7 @@ date_created: 2021-05-27T23:05:59
 date_modified: 2021-05-28T00:49:05
 slug: nizzarda-salad-2
 type: simple
+visible: true
 attibutes: 
 variations:
 featured: false

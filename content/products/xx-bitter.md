@@ -5,6 +5,7 @@ date_created: 2021-04-04T17:05:31
 date_modified: 2021-04-11T05:47:09
 slug: xx-bitter
 type: simple
+visible: true
 attibutes: 
 variations:
 featured: false

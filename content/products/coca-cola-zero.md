@@ -5,6 +5,7 @@ date_created: 2021-04-04T17:05:16
 date_modified: 2021-04-12T04:40:42
 slug: coca-cola-zero
 type: simple
+visible: true
 attibutes: 
 variations:
 featured: false

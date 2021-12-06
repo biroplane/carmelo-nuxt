@@ -5,6 +5,7 @@ date_created: 2021-04-07T12:42:56
 date_modified: 2021-04-11T05:31:52
 slug: salmon-lover
 type: wooco
+visible: true
 attibutes: 
 variations:
 featured: false

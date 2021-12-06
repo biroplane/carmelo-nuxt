@@ -5,6 +5,7 @@ date_created: 2021-04-04T17:05:01
 date_modified: 2021-04-14T20:02:02
 slug: ottawa-salad
 type: simple
+visible: true
 attibutes: 
 variations:
 featured: false

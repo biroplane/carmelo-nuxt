@@ -5,6 +5,7 @@ date_created: {{date_created}}
 date_modified: {{date_modified}}
 slug: {{slug}}
 type: {{type}}
+visible: {{visible}}
 attibutes: 
   {{#attributes}}
   - id: {{id}}

@@ -5,6 +5,7 @@ date_created: 2021-05-27T23:06:03
 date_modified: 2021-05-28T09:17:25
 slug: louisiana
 type: simple
+visible: true
 attibutes: 
 variations:
 featured: false

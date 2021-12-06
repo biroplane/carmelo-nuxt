@@ -5,6 +5,7 @@ date_created: 2021-04-04T17:04:59
 date_modified: 2021-04-08T04:34:00
 slug: avoegg
 type: simple
+visible: true
 attibutes: 
 variations:
 featured: false

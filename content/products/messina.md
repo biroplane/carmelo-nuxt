@@ -5,6 +5,7 @@ date_created: 2021-04-04T17:05:30
 date_modified: 2021-04-11T05:28:44
 slug: messina
 type: simple
+visible: true
 attibutes: 
 variations:
 featured: false

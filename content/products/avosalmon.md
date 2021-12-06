@@ -5,6 +5,7 @@ date_created: 2021-04-04T17:05:00
 date_modified: 2021-04-14T19:06:58
 slug: avosalmon
 type: simple
+visible: true
 attibutes: 
 variations:
 featured: false
