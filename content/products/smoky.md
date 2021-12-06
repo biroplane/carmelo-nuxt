@@ -5,6 +5,7 @@ date_created: 2021-04-04T17:04:46
 date_modified: 2021-04-14T19:30:41
 slug: smoky
 type: simple
+visible: true
 attibutes: 
 variations:
 featured: true

@@ -5,6 +5,7 @@ date_created: 2021-05-27T23:06:04
 date_modified: 2021-05-28T09:17:20
 slug: pulled-pork-12ore-2
 type: simple
+visible: true
 attibutes: 
 variations:
 featured: false

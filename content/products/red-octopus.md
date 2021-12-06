@@ -5,6 +5,7 @@ date_created: 2021-05-27T23:06:06
 date_modified: 2021-05-28T09:17:05
 slug: red-octopus
 type: simple
+visible: true
 attibutes: 
 variations:
 featured: false

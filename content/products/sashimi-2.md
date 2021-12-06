@@ -5,6 +5,7 @@ date_created: 2021-05-28T09:39:55
 date_modified: 2021-06-03T20:55:16
 slug: sashimi-2
 type: variable
+visible: true
 attibutes: 
   - id: 0
     name: Seleziona la tipologia

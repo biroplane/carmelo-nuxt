@@ -5,6 +5,7 @@ date_created: 2021-05-27T23:06:07
 date_modified: 2021-05-28T09:16:52
 slug: fish-n-chips
 type: simple
+visible: true
 attibutes: 
 variations:
 featured: false

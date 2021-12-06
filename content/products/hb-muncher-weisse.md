@@ -5,6 +5,7 @@ date_created: 2021-04-04T17:05:30
 date_modified: 2021-04-11T05:23:42
 slug: hb-muncher-weisse
 type: simple
+visible: true
 attibutes: 
 variations:
 featured: false

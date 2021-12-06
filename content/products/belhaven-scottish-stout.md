@@ -5,6 +5,7 @@ date_created: 2021-04-04T17:05:31
 date_modified: 2021-04-11T05:33:22
 slug: belhaven-scottish-stout
 type: simple
+visible: true
 attibutes: 
 variations:
 featured: false

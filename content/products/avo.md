@@ -5,6 +5,7 @@ date_created: 2021-05-27T23:06:02
 date_modified: 2021-05-28T09:17:28
 slug: avo
 type: simple
+visible: true
 attibutes: 
 variations:
 featured: false

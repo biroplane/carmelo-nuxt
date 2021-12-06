@@ -5,6 +5,7 @@ date_created: 2021-04-04T17:04:45
 date_modified: 2021-04-14T19:20:19
 slug: tex-burger
 type: simple
+visible: true
 attibutes: 
 variations:
 featured: false

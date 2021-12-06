@@ -5,6 +5,7 @@ date_created: 2021-05-28T09:23:21
 date_modified: 2021-05-28T09:48:48
 slug: bistecca
 type: variable
+visible: true
 attibutes: 
   - id: 0
     name: Carne

@@ -5,6 +5,7 @@ date_created: 2021-05-28T09:47:11
 date_modified: 2021-06-03T20:55:15
 slug: mozzarella-basket
 type: variable
+visible: true
 attibutes: 
   - id: 0
     name: Variante

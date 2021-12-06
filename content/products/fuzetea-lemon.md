@@ -5,6 +5,7 @@ date_created: 2021-04-04T17:05:14
 date_modified: 2021-04-12T05:07:00
 slug: fuzetea-lemon
 type: simple
+visible: true
 attibutes: 
 variations:
 featured: false

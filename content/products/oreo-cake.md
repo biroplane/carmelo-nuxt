@@ -5,6 +5,7 @@ date_created: 2021-04-12T10:33:25
 date_modified: 2021-04-12T18:09:30
 slug: oreo-cake
 type: simple
+visible: true
 attibutes: 
 variations:
 featured: false

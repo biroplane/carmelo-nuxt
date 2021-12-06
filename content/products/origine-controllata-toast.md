@@ -5,6 +5,7 @@ date_created: 2021-04-04T17:05:00
 date_modified: 2021-04-14T16:22:32
 slug: origine-controllata-toast
 type: simple
+visible: true
 attibutes: 
 variations:
 featured: false

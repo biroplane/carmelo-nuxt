@@ -5,6 +5,7 @@ date_created: 2021-05-27T23:05:58
 date_modified: 2021-05-28T09:17:45
 slug: caesar-salad-2
 type: simple
+visible: true
 attibutes: 
 variations:
 featured: false

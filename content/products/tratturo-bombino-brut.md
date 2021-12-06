@@ -5,6 +5,7 @@ date_created: 2021-04-04T17:05:34
 date_modified: 2021-04-11T06:42:50
 slug: tratturo-bombino-brut
 type: simple
+visible: true
 attibutes: 
 variations:
 featured: false

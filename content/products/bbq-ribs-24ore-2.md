@@ -5,6 +5,7 @@ date_created: 2021-05-27T23:06:05
 date_modified: 2021-05-28T09:17:10
 slug: bbq-ribs-24ore-2
 type: simple
+visible: true
 attibutes: 
 variations:
 featured: false

@@ -5,6 +5,7 @@ date_created: 2021-05-27T23:06:01
 date_modified: 2021-05-28T09:17:36
 slug: ambra-poke
 type: simple
+visible: true
 attibutes: 
 variations:
 featured: false

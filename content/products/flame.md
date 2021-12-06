@@ -5,6 +5,7 @@ date_created: 2021-04-04T17:04:47
 date_modified: 2021-06-03T21:10:27
 slug: flame
 type: simple
+visible: true
 attibutes: 
 variations:
 featured: false

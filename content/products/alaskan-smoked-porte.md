@@ -5,6 +5,7 @@ date_created: 2021-04-04T17:05:31
 date_modified: 2021-04-11T05:38:39
 slug: alaskan-smoked-porte
 type: simple
+visible: true
 attibutes: 
 variations:
 featured: false

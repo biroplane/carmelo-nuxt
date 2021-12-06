@@ -5,6 +5,7 @@ date_created: 2021-04-04T17:05:15
 date_modified: 2021-04-12T04:51:01
 slug: tonic-water
 type: simple
+visible: true
 attibutes: 
 variations:
 featured: false

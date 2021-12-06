@@ -5,6 +5,7 @@ date_created: 2021-04-12T00:45:00
 date_modified: 2021-04-12T03:38:49
 slug: basic-experience
 type: simple
+visible: true
 attibutes: 
 variations:
 featured: false

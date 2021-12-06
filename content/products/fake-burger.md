@@ -5,6 +5,7 @@ date_created: 2021-04-04T17:04:46
 date_modified: 2021-04-17T23:24:59
 slug: fake-burger
 type: simple
+visible: true
 attibutes: 
 variations:
 featured: false
