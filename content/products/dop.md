@@ -1,25 +1,11 @@
 ---
-id: 3001
-title: 'DOP'
-date_created: 2021-05-27T23:06:03
-date_modified: 2021-05-28T09:17:22
-slug: dop
-type: simple
+title: Dop
+isNew: false
 visible: true
-attibutes: 
-variations:
-featured: false
-price: 7.50
-preview: '  '
-categories: 
-  - id: 209
-    name: Toast &amp; Chips
-    slug: toast-chips
-tags: 
-images: 
-
-
+description: Crudo di Parma, mozzarella di Bufala campana e maionese al tartufo
+price: 7.5
+categories:
+  - toast-chips
+order: 1
 ---
-
-<p>Crudo di Parma DOP, Mozzarella di bufala campana DOP, crema di Tartufo DOP e pane in cassetta servito con con CHIPS</p>
-
+Crudo di Parma, mozzarella di Bufala campana e maionese al tartufo

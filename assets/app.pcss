@@ -2,3 +2,12 @@ html,
 body {
   @apply bg-black text-white;
 }
+input,
+button,
+textarea {
+  @apply focus:outline-none;
+}
+.block-shadow {
+  @apply border-2 border-primary-500 bg-white;
+  box-shadow: 2px 2px 0px 0px theme(colors.primary.500);
+}

@@ -1,27 +1,11 @@
 ---
-id: 2232
-title: 'Sushi Bacon Roll'
-date_created: 2021-04-04T17:04:45
-date_modified: 2021-04-30T17:37:43
-slug: sushi-bacon-roll
-type: simple
+title: Sushi Bacon Roll
+isNew: false
 visible: true
-attibutes: 
-variations:
-featured: false
-price: 6.50
-preview: '  '
-categories: 
-  - id: 158
-    name: Fried Snack
-    slug: fried-snack
-tags: 
-images: 
-  - scr: https://www.carmelosoulkitchen.com/wp-content/uploads/2021/04/Sushi-Bacon-Roll.png
-    alt: 
-
-
+excerpt: Roll di carne avvolto nel bacon con cuore di cheddar
+description: Roll di carne avvolto nel bacon con cuore di cheddar
+price: 6.5
+categories:
+  - fried-snack
+order: 6
 ---
-
-<p>Roll di carne avvolto nel <strong>Bacon</strong> con un cuore di <strong>Cheddar</strong></p>
-

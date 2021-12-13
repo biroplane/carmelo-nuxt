@@ -1,6 +1,7 @@
 <template>
-  <div class="">
+  <div class="w-screen overflow-x-hidden">
     <app-header></app-header>
+    <fab></fab>
     <!-- <div class="h-16"></div> -->
     <Nuxt />
   </div>

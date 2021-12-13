@@ -1,25 +1,10 @@
 ---
-id: 2999
-title: 'Vancouver'
-date_created: 2021-05-27T23:06:02
-date_modified: 2021-05-28T09:17:30
-slug: vancouver
-type: simple
+title: Vancouver
+isNew: false
 visible: true
-attibutes: 
-variations:
-featured: false
-price: 7.50
-preview: '  '
-categories: 
-  - id: 209
-    name: Toast &amp; Chips
-    slug: toast-chips
-tags: 
-images: 
-
-
+description: Sashimi di salmone, crema di avocado, barbabietola al wasabi e semi di sesamo
+price: 7.5
+categories:
+  - toast-chips
+order: 2
 ---
-
-<p>Avocado, salmone, semi di sesamo su due fette pane casereccio servito con SWEET POTATOES</p>
-

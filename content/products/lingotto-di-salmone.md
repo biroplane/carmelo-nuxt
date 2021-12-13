@@ -1,24 +1,10 @@
 ---
-id: 3005
-title: 'LINGOTTO DI SALMONE'
-date_created: 2021-05-27T23:06:04
-date_modified: 2021-05-28T09:17:18
-slug: lingotto-di-salmone
-type: simple
+title: Lingotto di Salmone
+isNew: false
 visible: true
-attibutes: 
-variations:
-featured: false
-price: 12.50
-preview: '  '
-categories: 
-  - id: 210
-    name: Tex Mex
-    slug: tex-mex
-tags: 
-images: 
-
-
+description: Lingotto di salmone servito con patate al forno, riso basmati e salsa al curry
+price: 12.5
+categories:
+  - piatti-unici
+order: 8
 ---
-
-

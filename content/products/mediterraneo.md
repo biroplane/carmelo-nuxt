@@ -1,0 +1,12 @@
+---
+title: Mediterraneo
+isNew: true
+visible: true
+description: Pane Multicereali, medaglione di verdure gligliate, friarielli di
+  campo, chips di salvia e ketchup pugliese
+price: 9
+categories:
+  - fake-burger
+order: 4
+---
+Pane **Multicereali**, medaglione di verdure gligliate, friarielli di campo, chips di salvia e ketchup pugliese

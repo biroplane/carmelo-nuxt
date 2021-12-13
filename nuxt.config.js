@@ -21,10 +21,10 @@ export default {
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: ['~/assets/app.pcss'],
+  css: ['~/assets/app.pcss', 'aos/dist/aos.css'],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [],
+  plugins: [{ src: '~/plugins/aos', mode: 'client' }, '~/plugins/filters'],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -50,7 +50,9 @@ export default {
   googleFonts: {
     display: 'swap',
     families: {
-      Montserrat: ['400', '700']
+      Montserrat: ['400', '700'],
+      'Bebas Neue': true,
+      Kanit: [100, 200, 300, 400, 500, 600, 700, 800, 900]
     }
   },
 

@@ -36,7 +36,6 @@ export default {
   },
   methods: {
     handleScroll() {
-      console.log('scrolling', window.scrollY)
       if (window.scrollY > 100) {
         this.visible = true
       } else {
@@ -47,7 +46,8 @@ export default {
 }
 </script>
 
-<style>
+<style lang="postcss">
 .bgVisible {
+  @apply bg-black;
 }
 </style>
