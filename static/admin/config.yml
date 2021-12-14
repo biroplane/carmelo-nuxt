@@ -37,13 +37,13 @@ collections:
           required: true,
           default: true,
         }
-      - { name: "excerpt", label: "Excerpt", widget: "text", required: false }
-      - {
-          name: "description",
-          label: "Description",
-          widget: "markdown",
-          required: false,
-        }
+      # - { name: "excerpt", label: "Excerpt", widget: "text", required: false }
+      # - {
+      #     name: "description",
+      #     label: "Description",
+      #     widget: "markdown",
+      #     required: false,
+      #   }
       - { name: "body", label: "Body", widget: "markdown", required: false }
       - {
           name: "price",
@@ -92,9 +92,11 @@ collections:
           label: "Tags",
           widget: "relation",
           collection: "tags",
-          value_field: "slug",
+          value_field: "{{slug}}",
+          display_fields: ["title"],
           search_fields: ["title"],
           required: false,
+          multiple: true,
         }
       - { name: "images", label: "Images", widget: "image", required: false }
       - { name: "order", label: "Order", widget: "number", required: false }
@@ -120,6 +122,13 @@ collections:
           default: true,
           required: false,
         }
+      - {
+          name: "custom",
+          label: "custom",
+          widget: "boolean",
+          default: false,
+          required: false,
+        }
       - { name: "images", label: "Images", widget: "image", required: false }
       - { name: "description", label: "Description", widget: "markdown" }
       - {
@@ -135,12 +144,39 @@ collections:
     format: "frontmatter"
     slug: "{{slug}}"
     create: true
+
+    media_library:
+      config:
+        multiple: true
     fields:
       - { name: "title", label: "Title", widget: "string" }
-      - { name: "featured", label: "Featured", widget: "boolean" }
-      - { name: "visible", label: "Visible", widget: "boolean" }
-      - { name: "images", label: "Images", widget: "image" }
-      - { name: "description", label: "Description", widget: "markdown" }
+      - {
+          name: "featured",
+          label: "Featured",
+          widget: "boolean",
+          required: false,
+        }
+      - {
+          name: "visible",
+          label: "Visible",
+          widget: "boolean",
+          required: false,
+        }
+      - {
+          name: "images",
+          label: "Images",
+          widget: "image",
+          required: false,
+          allow_multiple: true,
+          media_folder: "tags",
+        }
+      - {
+          name: "body",
+          label: "Description",
+          widget: "markdown",
+          required: false,
+        }
+      - { name: "order", label: "Order", widget: "number", required: false }
   - name: "ingredients"
     label: "Ingredients"
     folder: "content/ingredients"

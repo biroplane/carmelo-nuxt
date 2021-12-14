@@ -24,7 +24,11 @@ export default {
   css: ['~/assets/app.pcss', 'aos/dist/aos.css'],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [{ src: '~/plugins/aos', mode: 'client' }, '~/plugins/filters'],
+  plugins: [
+    { src: '~/plugins/aos', mode: 'client' },
+    { src: '~/plugins/vue-carousel', mode: 'client' },
+    '~/plugins/filters'
+  ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,

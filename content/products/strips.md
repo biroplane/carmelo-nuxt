@@ -2,8 +2,6 @@
 title: Strips
 isNew: false
 visible: true
-excerpt: "Petto di pollo tagliato a stick e panato "
-description: Petto di pollo tagliato a stick e panato
 variations:
   variants:
     - variation: M
@@ -14,3 +12,5 @@ categories:
   - fried-snack
 order: 4
 ---
+
+Petto di pollo tagliato a stick e panato

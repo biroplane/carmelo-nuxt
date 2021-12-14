@@ -2,8 +2,6 @@
 title: Sweet Potato
 isNew: false
 visible: true
-excerpt: Patate dolci a pasta arancione taglio stick
-description: Patate dolci a pasta arancione taglio stick
 variations:
   variants:
     - variation: M
@@ -14,3 +12,5 @@ categories:
   - fried-snack
 order: 2
 ---
+
+Patate dolci a pasta arancione taglio stick

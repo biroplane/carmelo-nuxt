@@ -7,22 +7,47 @@
       </div>
     </hero>
     <!-- <pre>{{ $store.getters.byCategory }}</pre> -->
-    <wave />
+    <!-- <wave /> -->
+    <aside class="container">
+      <ClientOnly>
+        <h2 class="mb-8 text-center">Di Cosa hai voglia oggi?</h2>
+        <carousel :per-page="4" :pagination-enabled="false">
+          <slide v-for="(tag, t) in tags" :key="t">
+            <div class="flex flex-col space-y-4 items-center">
+              <div class="w-16 h-16 border-2 border-white rounded-full">
+                <img :src="tag.images" alt="tag" />
+              </div>
+              <p class="text-xs text-center">{{ tag.title }}</p>
+            </div>
+          </slide>
+        </carousel>
+      </ClientOnly>
+    </aside>
     <section class="z-20 w-full container">
       <input
         v-model="search"
         type="search"
-        class="block w-full p-4 rounded-md text-black -mt-12 mb-4"
+        class="
+          block
+          w-full
+          p-4
+          rounded-md
+          text-black
+          my-12
+          bg-transparent
+          border-b border-gray-300
+        "
         placeholder="Cerca"
       />
       <div>
         <div
-          v-for="(cat, c) in categories"
+          v-for="(cat, c) in food"
           :key="c"
-          data-aos="fade-up"
-          data-aos-easing="ease-out-back"
-          data-aos-duration="6000"
           class="mb-8"
+          data-aos="fade-up"
+          data-aos-easing="in-out"
+          data-aos-duration="1500"
+          :data-aos-delay="c * 10"
         >
           <h1 class="category">{{ cat.title }}</h1>
           <ul class="ml-4 font-bebas font-light text-lg">
@@ -30,19 +55,22 @@
               v-for="(item, i) in cat.items"
               :key="i"
               class="flex mt-4"
-              data-aos="fade-left"
-              data-aos-easing="ease-in-back"
-              data-aos-duration="9000"
-              :data-aos-delay="i * 10"
+              data-aos="fade-up"
+              data-aos-easing="in-out"
+              data-aos-duration="3500"
             >
               <div class="flex-grow">
-                <h3>
+                <h3 class="text-xl">
                   {{ item.title }}
                   <b v-if="item.isNew" class="text-yellow text-xs">★</b>
                 </h3>
-                <p class="font-body text-xs text-gray-300">
+                <!-- <p class="font-body text-xs text-gray-300">
                   {{ item.description }}
-                </p>
+                </p> -->
+                <nuxt-content
+                  :document="item"
+                  class="prose prose-sm font-body text-gray-300"
+                />
               </div>
               <div class="w-auto flex justify-end">
                 <ul
@@ -62,6 +90,9 @@
               </div>
             </li>
           </ul>
+          <div v-if="cat.category_name === 'pokè'" class="my-12">
+            <nuxt-content :document="poke"></nuxt-content>
+          </div>
         </div>
       </div>
     </section>
@@ -72,7 +103,7 @@
           Qualcosa da Bere?
         </h2>
       </div>
-      <div class="grid grid-cols-2 gap-4">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
         <div v-for="i in 6" :key="i" class="block-shadow rounded-md text-black">
           <img :src="birra.image" class="w-full square object-cover" />
           <h3>{{ birra.name }}</h3>
@@ -86,7 +117,9 @@
 export default {
   async asyncData({ $content }) {
     const orari = await $content('pages/orari').fetch()
-    return { orari }
+    const poke = await $content('custom/pokè').fetch()
+    const tags = await $content('tags').sortBy('slug').fetch()
+    return { orari, poke, tags }
   },
   data: () => ({
     birra: {
@@ -101,8 +134,8 @@ export default {
     },
   }),
   computed: {
-    categories() {
-      return this.$store.getters.categories
+    food() {
+      return this.$store.getters.food
     },
     search: {
       get() {
@@ -116,8 +149,9 @@ export default {
 }
 </script>
 <style lang="postcss">
-.nuxt-content {
-  @apply text-sm;
+.nuxt-content strong,
+.nuxt-content b {
+  color: inherit !important;
 }
 .nuxt-content h3 {
   @apply font-bold mt-4;

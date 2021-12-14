@@ -4,18 +4,40 @@ export const state = () => ({
   categories: [],
   cart: [],
   total: 0,
-  search: ''
+  search: '',
+  selectedTag: '',
+  foodCategories: [
+    'passatempo',
+    'fried-snack',
+    'veg-snack',
+    'healthy-fresh',
+    'toast-chips',
+    'burrito',
+    'piatti-unici',
+    'ferro-e-fuoco',
+    'burger',
+    'fake-burger',
+    'soul-burger',
+    'apulian-burger',
+    'fish-burger',
+    'insalate',
+    'pokè',
+    'dessert',
+    'digestive'
+  ],
+  drinkCategories: ['soft-drink', 'birra', 'vino']
 })
 export const getters = {
-  // categories: (state) => {
-  //   const _cats = state.products
-  //     .map((product) => product.categories)
-  //     .filter((c) => c)
-  //     .flat()
-  //   const _res = new Map(_cats.map((c) => [c.slug, c]))
-
-  //   return Array.from(_res).flat()
-  // },
+  food: (state, getters) => {
+    return getters.categories.filter((cat) => {
+      return state.foodCategories.includes(cat.slug)
+    })
+  },
+  drink: (state, getters) => {
+    return getters.categories.filter((cat) => {
+      return state.drinkCategories.includes(cat.slug)
+    })
+  },
   products: (state) =>
     state.products.filter((product) =>
       product.title.toLowerCase().includes(state.search.toLowerCase())
@@ -25,7 +47,7 @@ export const getters = {
       .map((cat) => {
         return {
           ...cat,
-          category_name: cat.title.toLowerCase(),
+          category_slug: cat.slug.toLowerCase(),
           items: getters.products.filter((product) => {
             return product.categories.includes(cat.slug)
           })

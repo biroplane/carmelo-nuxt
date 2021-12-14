@@ -2,11 +2,10 @@
 title: Bbq Ribs
 isNew: false
 visible: true
-description: Costine di maiale alla Bbq ottenute con una preparazione di quasi
-  24h tra marinatura e cottura a vapore, saporite e gustose, da provare!
 price: 9.5
 categories:
   - piatti-unici
 order: 6
 ---
+
 Costine di maiale alla Bbq ottenute con una preparazione **di 24h tra marinatura e cottura a vapore**, saporite e gustose, da provare!

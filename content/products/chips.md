@@ -2,8 +2,6 @@
 title: Chips
 isNew: false
 visible: true
-excerpt: Patate pasta gialla con buccia
-description: Patate pasta gialla con buccia
 variations:
   variants:
     - variation: M
@@ -14,3 +12,5 @@ categories:
   - fried-snack
 order: 1
 ---
+
+Patate pasta gialla con buccia

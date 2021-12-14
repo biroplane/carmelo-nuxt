@@ -2,8 +2,7 @@
 title: Vertigo chips
 isNew: false
 visible: true
-excerpt: "Patate taglio a vortice, speziate "
-description: Patate taglio a vortice, speziate
+excerpt: 'Patate taglio a vortice, speziate '
 variations:
   variants:
     - variation: M
@@ -14,3 +13,5 @@ categories:
   - fried-snack
 order: 3
 ---
+
+Patate taglio a vortice, speziate
