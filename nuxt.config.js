@@ -5,6 +5,11 @@ export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
 
+  env: {
+    AIRTABLE_BASE_ID: process.env.AIRTABLE_BASE_ID,
+    AIRTABLE_API: process.env.AIRTABLE_API
+  },
+
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: 'carmelo-nuxt',
@@ -27,6 +32,7 @@ export default {
   plugins: [
     { src: '~/plugins/aos', mode: 'client' },
     { src: '~/plugins/vue-carousel', mode: 'client' },
+    { src: '~/plugins/v-calendar', mode: 'client' },
     '~/plugins/filters'
   ],
 

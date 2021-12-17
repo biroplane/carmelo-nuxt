@@ -8,6 +8,7 @@ categories:
 tags:
   - lactose-free
   - gluten-free
+  - beef
 order: 2
 ---
 

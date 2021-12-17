@@ -28,20 +28,22 @@ export const state = () => ({
   drinkCategories: ['soft-drink', 'birra', 'vino']
 })
 export const getters = {
-  food: (state, getters) => {
-    return getters.categories.filter((cat) => {
-      return state.foodCategories.includes(cat.slug)
-    })
-  },
+  food: (state, getters) =>
+    getters.categories.filter((cat) => state.foodCategories.includes(cat.slug)),
   drink: (state, getters) => {
     return getters.categories.filter((cat) => {
       return state.drinkCategories.includes(cat.slug)
     })
   },
   products: (state) =>
-    state.products.filter((product) =>
-      product.title.toLowerCase().includes(state.search.toLowerCase())
-    ),
+    state.products
+      .filter((product) => {
+        if (!state.selectedTag) return true
+        return product.tags ? product.tags.includes(state.selectedTag) : false
+      })
+      .filter((product) =>
+        product.title.toLowerCase().includes(state.search.toLowerCase())
+      ),
   categories: (state, getters) =>
     state.categories
       .map((cat) => {
@@ -73,6 +75,9 @@ export const mutations = {
   },
   SET_CATEGORIES(state, data) {
     state.categories = data
+  },
+  SET_TAG(state, tag) {
+    state.selectedTag = tag
   },
   SET_SEARCH(state, search) {
     state.search = search

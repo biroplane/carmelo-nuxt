@@ -1,4 +1,4 @@
 ---
 title: Gluten Free
-images: tags/gluten-free.svg
+images: /img/gluten-free.svg
 ---

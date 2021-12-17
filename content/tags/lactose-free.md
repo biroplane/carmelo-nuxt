@@ -1,4 +1,4 @@
 ---
 title: Lactose free
-images: tags/lactose-free.svg
+images: /img/lactose-free.svg
 ---

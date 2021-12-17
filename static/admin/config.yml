@@ -3,7 +3,7 @@ backend:
 
 local_backend: true
 
-media_folder: public/img
+media_folder: static/img
 public_folder: /img
 
 collections:
@@ -144,10 +144,6 @@ collections:
     format: "frontmatter"
     slug: "{{slug}}"
     create: true
-
-    media_library:
-      config:
-        multiple: true
     fields:
       - { name: "title", label: "Title", widget: "string" }
       - {
@@ -167,8 +163,7 @@ collections:
           label: "Images",
           widget: "image",
           required: false,
-          allow_multiple: true,
-          media_folder: "tags",
+          allow_multiple: false,
         }
       - {
           name: "body",

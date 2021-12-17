@@ -10,15 +10,39 @@
     <!-- <wave /> -->
     <aside class="container">
       <ClientOnly>
-        <h2 class="mb-8 text-center">Di Cosa hai voglia oggi?</h2>
+        <h2 class="mb-8 text-center font-bold">Di Cosa hai voglia oggi?</h2>
         <carousel :per-page="4" :pagination-enabled="false">
-          <slide v-for="(tag, t) in tags" :key="t">
-            <div class="flex flex-col space-y-4 items-center">
-              <div class="w-16 h-16 border-2 border-white rounded-full">
-                <img :src="tag.images" alt="tag" />
+          <slide>
+            <button
+              class="flex flex-col space-y-4 items-center"
+              @click="filterTag('')"
+            >
+              <div
+                class="w-16 h-16 rounded-full p-2 grid place-items-center"
+                :class="{ 'bg-gray-200': $store.state.selectedTag == '' }"
+              >
+                <logo />
               </div>
-              <p class="text-xs text-center">{{ tag.title }}</p>
-            </div>
+              <p class="text-xs text-center taglist">Tutto</p>
+            </button>
+          </slide>
+          <slide v-for="(tag, t) in tags" :key="t">
+            <button
+              class="flex flex-col space-y-4 items-center"
+              @click="filterTag(tag)"
+            >
+              <div
+                class="w-16 h-16 rounded-full p-2 grid place-items-center"
+                :class="{ 'bg-gray-200': $store.state.selectedTag == tag.slug }"
+              >
+                <img
+                  :src="tag.images"
+                  :alt="tag.title"
+                  class="w-full h-12 object-contain"
+                />
+              </div>
+              <p class="text-xs text-center taglist">{{ tag.title }}</p>
+            </button>
           </slide>
         </carousel>
       </ClientOnly>
@@ -32,7 +56,6 @@
           w-full
           p-4
           rounded-md
-          text-black
           my-12
           bg-transparent
           border-b border-gray-300
@@ -47,7 +70,6 @@
           data-aos="fade-up"
           data-aos-easing="in-out"
           data-aos-duration="1500"
-          :data-aos-delay="c * 10"
         >
           <h1 class="category">{{ cat.title }}</h1>
           <ul class="ml-4 font-bebas font-light text-lg">
@@ -90,7 +112,8 @@
               </div>
             </li>
           </ul>
-          <div v-if="cat.category_name === 'pokè'" class="my-12">
+          <div v-if="cat.custom" class="my-12">
+            <h1>Crea la tua Poke</h1>
             <nuxt-content :document="poke"></nuxt-content>
           </div>
         </div>
@@ -146,6 +169,16 @@ export default {
       },
     },
   },
+  methods: {
+    filterTag(tag) {
+      // TOGGLE
+      if (this.$store.state.selectedTag === tag.slug) {
+        this.$store.commit('SET_TAG', '')
+      } else {
+        this.$store.commit('SET_TAG', tag.slug)
+      }
+    },
+  },
 }
 </script>
 <style lang="postcss">
@@ -158,5 +191,8 @@ export default {
 }
 h1.category {
   @apply font-black text-4xl md:text-5xl uppercase bg-clip-text text-transparent bg-gradient-to-r from-primary-500 to-purple-600;
+}
+.taglist {
+  @apply bg-clip-text text-transparent bg-gradient-to-t from-yellow to-purple-300;
 }
 </style>

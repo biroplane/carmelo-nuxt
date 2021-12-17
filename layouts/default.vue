@@ -18,4 +18,10 @@ export default {
 }
 </script>
 
-<style></style>
+<style>
+html,
+body {
+  width: 100vw;
+  overflow-x: hidden;
+}
+</style>

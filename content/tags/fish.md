@@ -1,4 +1,4 @@
 ---
 title: Fish
-images: tags/fish.svg
+images: /img/fish.svg
 ---

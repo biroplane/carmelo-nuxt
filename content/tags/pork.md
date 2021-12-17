@@ -1,4 +1,4 @@
 ---
 title: Pork
-images: tags/pork.svg
+images: /img/pork.svg
 ---
