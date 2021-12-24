@@ -5,7 +5,7 @@ export const state = () => ({
   cart: [],
   total: 0,
   search: '',
-  selectedTag: '',
+  selectedTag: undefined,
   foodCategories: [
     'passatempo',
     'fried-snack',
@@ -25,12 +25,12 @@ export const state = () => ({
     'dessert',
     'digestive'
   ],
-  drinkCategories: ['soft-drink', 'birra', 'vino']
+  drinkCategories: ['soft-drink', 'birra', 'spina', 'vino']
 })
 export const getters = {
   food: (state, getters) =>
     getters.categories.filter((cat) => state.foodCategories.includes(cat.slug)),
-  drink: (state, getters) => {
+  drinks: (state, getters) => {
     return getters.categories.filter((cat) => {
       return state.drinkCategories.includes(cat.slug)
     })

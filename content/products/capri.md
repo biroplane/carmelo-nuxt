@@ -5,6 +5,9 @@ visible: true
 price: 6
 categories:
   - healthy-fresh
+tags:
+  - veg
+  - gluten-free
 order: 2
 ---
 

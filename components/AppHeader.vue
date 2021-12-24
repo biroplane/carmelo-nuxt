@@ -5,26 +5,15 @@
   >
     <div class="container h-full flex items-center justify-between">
       <logo></logo>
-      <button
-        class="
-          w-10
-          h-10
-          flex
-          justify-center
-          items-center
-          hover:bg-primary-400
-          rounded-full
-          text-primary-500
-        "
-      >
-        <i class="mdi mdi-menu text-xl"></i>
-      </button>
+      <Drawer></Drawer>
     </div>
   </header>
 </template>
 
 <script>
+import Drawer from './Drawer.vue'
 export default {
+  components: { Drawer },
   data: () => ({
     visible: false,
   }),

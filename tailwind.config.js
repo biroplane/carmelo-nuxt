@@ -42,12 +42,12 @@ module.exports = {
           900: '#020308'
         },
         yellow: '#FFC845',
-        lightGray: '#d3d3d3',
-        purple: {
-          200: '#1a15517d',
-          400: '#1a1551bd',
-          900: '#1a1551'
-        }
+        lightGray: '#d3d3d3'
+        // purple: {
+        //   200: '#1a15517d',
+        //   400: '#1a1551bd',
+        //   900: '#1a1551'
+        // }
       },
       spacing: {
         px: '1px',
@@ -125,10 +125,11 @@ module.exports = {
       }
     },
     fontFamily: {
-      serif: ['Source Serif'],
-      sans: ['Montserrat', 'sans-serif'],
       body: ['Montserrat', 'sans-serif'],
-      bebas: ['Bebas Neue', 'sans-serif']
+      serif: ['BioRhyme', 'serif'],
+      sans: ['Montserrat', 'sans-serif'],
+      bebas: ['Bebas Neue', 'sans-serif'],
+
     },
     zIndex: {
       auto: 'auto',
@@ -235,6 +236,7 @@ module.exports = {
     require('postcss-import'),
     require('tailwindcss'),
     require('autoprefixer'),
-    require('@tailwindcss/typography')
+    require('@tailwindcss/typography'),
+    require('tailwindcss/nesting')
   ]
 }

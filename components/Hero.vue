@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full h-128">
+  <div class="w-full h-96 md:h-128">
     <div class="relative h-full">
       <div class="absolute left-0 top-0 w-full h-full">
         <img

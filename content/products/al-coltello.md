@@ -6,8 +6,6 @@ price: 14
 categories:
   - ferro-e-fuoco
 tags:
-  - lactose-free
-  - gluten-free
   - beef
 order: 2
 ---

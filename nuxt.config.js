@@ -4,17 +4,20 @@ export default {
 
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
+  pageTransition: 'pageSlide',
 
   env: {
     AIRTABLE_BASE_ID: process.env.AIRTABLE_BASE_ID,
-    AIRTABLE_API: process.env.AIRTABLE_API
+    AIRTABLE_API: process.env.AIRTABLE_API,
+    AIRTABLE_BASE_URL: process.env.AIRTABLE_BASE_URL,
+    GOOGLE_MAPS: process.env.GOOGLE_MAPS
   },
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: 'carmelo-nuxt',
     htmlAttrs: {
-      lang: 'en'
+      lang: 'it'
     },
     meta: [
       { charset: 'utf-8' },
@@ -30,7 +33,7 @@ export default {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
-    { src: '~/plugins/aos', mode: 'client' },
+    // { src: '~/plugins/aos', mode: 'client' },
     { src: '~/plugins/vue-carousel', mode: 'client' },
     { src: '~/plugins/v-calendar', mode: 'client' },
     '~/plugins/filters'
@@ -55,14 +58,21 @@ export default {
     '@nuxt/content',
 
     '@nuxtjs/google-fonts',
-    'nuxtjs-mdi-font'
+    'nuxtjs-mdi-font',
+    [
+      'nuxt-gmaps',
+      {
+        key: process.env.GOOGLE_MAPS
+        // you can use libraries: ['places']
+      }
+    ]
   ],
   googleFonts: {
     display: 'swap',
     families: {
-      Montserrat: ['400', '700'],
+      Montserrat: [400, 500, 600, 700, 800, 900],
       'Bebas Neue': true,
-      Kanit: [100, 200, 300, 400, 500, 600, 700, 800, 900]
+      BioRhyme: [100, 200, 300, 400, 500, 600, 700, 800, 900]
     }
   },
 
@@ -73,5 +83,11 @@ export default {
   content: {},
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {}
+  build: {
+    postcss: {
+      plugins: {
+        'postcss-nested': {}
+      }
+    }
+  }
 }

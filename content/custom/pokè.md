@@ -2,43 +2,77 @@
 title: crea la tua pokè
 ---
 
-## REGULAR 11
+## REGULAR <strong>11€</strong>
 
-1 BASE | 1 PROTEINA | 4 CONDIMENTI | TOPPING | SALSA
+- 1 Base
+- 1 Proteina
+- 4 Condimenti
+- Topping
+- Salsa
 
----
+## LARGE <strong>13€</strong>
 
-## LARGE 13
-
-2 BASI | 1 PROTEINA | 5 CONDIMENTI | TOPPING | SALSA
-
----
+- 2 Basi
+- 1 Proteina
+- 5 Condimenti
+- Topping
+- Salsa
 
 ### BASE
 
-RISO VENERE | RISO BIANCO | QUINOA | INSALATA
+- Riso Venere
+- Riso Bianco
+- Quinoa
+- Insalata
 
 ### PROTEINE
 
-SALMONE | TONNO | POLLO GRIGLIATO
-MOZZARELLA DI BUFALA | TONNO SOTT'OLIO
+- Salmone
+- Tonno
+- Pollo Grigliato
+- Mozzarella Di Bufala
+- Tonno Sott Olio
 
 ### CONDIMENTI
 
-CAROTE | PATATE | FAGIOLINI | CETRIOLI | AVOCADO | OLIVE
-MAIS | ALGA WAKAME | EDAMAME | BARBABIETOLA | POMODORI | FUNGHI | MELA VERDE | POMODORI SOTT'OLIO | FRIARIELLI DI CAMPO | SENAPE SELVATICA
+- Carote
+- Patate
+- Fagiolini
+- Cetrioli
+- Avocado
+- Olive
+- Mais
+- Alga Wakame
+- Edamame
+- Barbabietola
+- Pomodori
+- Funghi
+- Mela Verde
+- Pomodori Sott Olio
+- Friarielli Di Campo
+- Senape Selvatica
 
 ### TOPPING
 
-GRANELLA DI PISTACCHIO | MANDORLE | SEMI DI SESAMO
+- Granella Di Pistacchio
+- Mandorle
+- Semi Di Sesamo
 
 ### EXTRA
 
-BARBABIETOLA AL WASABI | BORRAGINE IN CROSTA
-BACON | CHIPS DI ZUCCHINE | CILIEGINI AL CUMINO
-CILIEGINI FRITTI | SALVIA IN CROSTA | UOVA
+- Barbabietola Al Wasabi
+- Borragine In Crosta
+- Bacon
+- Chips Di Zucchine
+- Ciliegini Al Cumino
+- Ciliegini Fritti
+- Salvia In Crosta
+- Uova
 
 ### SALSE
 
-MAIONESE VEG | MAIONESE AL LIME | CREMA DI AVOCADO
-MAIONESE ALLA BARBABIETOLA | SALSA YOGURT
+- Maionese Veg
+- Maionese Al Lime
+- Crema Di Avocado
+- Maionese Alla Barbabietola
+- Salsa Yogurt

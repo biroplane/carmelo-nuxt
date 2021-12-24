@@ -1,5 +1,5 @@
 ---
-title: Tataki di Tono
+title: Tataki di Tonno
 isNew: false
 visible: true
 price: 12.5

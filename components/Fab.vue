@@ -13,7 +13,7 @@
       cursor-pointer
     "
     :class="[isOpen ? 'w-full right-0' : 'w-12 right-6']"
-    @click="isOpen = !isOpen"
+    @blur="isOpen = !isOpen"
   >
     <div
       class="
@@ -28,9 +28,14 @@
         focus:outline-none
       "
     >
-      <button class="flex" @click="open" @blur="isOpen = !isOpen">
-        <img src="/phone.png" alt="phone" />
-        <h5 v-if="isOpen" class="text-black font-semibold">WhatsApp</h5>
+      <button
+        v-if="!isOpen"
+        class="flex justify-center items-center space-x-2"
+        @click="open"
+      >
+        <!-- <img src="/phone.png" alt="phone" /> -->
+        <i class="mdi mdi-plus text-2xl text-primary-500"></i>
+        <!-- <h5 class="text-black font-semibold">WhatsApp</h5> -->
       </button>
     </div>
   </div>

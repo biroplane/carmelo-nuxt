@@ -11,3 +11,15 @@ textarea {
   @apply border-2 border-primary-500 bg-white;
   box-shadow: 2px 2px 0px 0px theme(colors.primary.500);
 }
+.pageSlide-enter-active,
+.pageSlide-leave-active {
+  transition: all 0.5s;
+}
+.pageSlide-enter,
+.pageSlide-leave-active {
+  opacity: 0;
+  transform: translateY(50px);
+}
+.font-serif {
+  @apply font-medium;
+}

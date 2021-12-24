@@ -1,8 +1,7 @@
 <template>
   <div class="w-full h-full">
     <hero>
-      <div class="flex flex-col">
-        <logo />
+      <div class="flex flex-col pt-12">
         <nuxt-content :document="orari" />
       </div>
     </hero>
@@ -11,7 +10,15 @@
     <aside class="container">
       <ClientOnly>
         <h2 class="mb-8 text-center font-bold">Di Cosa hai voglia oggi?</h2>
-        <carousel :per-page="4" :pagination-enabled="false">
+        <carousel
+          :per-page="4"
+          :pagination-enabled="false"
+          :auto-play="true"
+          :autoplay-timeout="300"
+          :autoplay-hover-pause="true"
+          :scroll-per-page="false"
+          easing="ease-in-out"
+        >
           <slide>
             <button
               class="flex flex-col space-y-4 items-center"
@@ -19,9 +26,9 @@
             >
               <div
                 class="w-16 h-16 rounded-full p-2 grid place-items-center"
-                :class="{ 'bg-gray-200': $store.state.selectedTag == '' }"
+                :class="{ 'bg-gray-200': selectedTag == '' }"
               >
-                <logo />
+                <logo :dark="selectedTag == ''" />
               </div>
               <p class="text-xs text-center taglist">Tutto</p>
             </button>
@@ -48,41 +55,36 @@
       </ClientOnly>
     </aside>
     <section class="z-20 w-full container">
-      <input
-        v-model="search"
-        type="search"
-        class="
-          block
-          w-full
-          p-4
-          rounded-md
-          my-12
-          bg-transparent
-          border-b border-gray-300
-        "
-        placeholder="Cerca"
-      />
+      <div class="relative h-20 overflow-y-visible">
+        <input
+          v-model="search"
+          type="search"
+          class="
+            block
+            w-full
+            p-4
+            rounded-md
+            my-12
+            bg-transparent
+            border-b border-gray-300
+            sticky
+            top-12
+          "
+          placeholder="Cerca"
+        />
+      </div>
       <div>
-        <div
-          v-for="(cat, c) in food"
-          :key="c"
-          class="mb-8"
-          data-aos="fade-up"
-          data-aos-easing="in-out"
-          data-aos-duration="1500"
-        >
+        <div v-for="(cat, c) in food" :key="c" class="mb-8">
           <h1 class="category">{{ cat.title }}</h1>
-          <ul class="ml-4 font-bebas font-light text-lg">
+          <ul class="ml-4 font-light text-lg">
             <li
               v-for="(item, i) in cat.items"
               :key="i"
-              class="flex mt-4"
-              data-aos="fade-up"
-              data-aos-easing="in-out"
-              data-aos-duration="3500"
+              ref="scrollItem"
+              class="flex mt-4 scroll-item"
             >
               <div class="flex-grow">
-                <h3 class="text-xl">
+                <h3 class="text-xl font-serif">
                   {{ item.title }}
                   <b v-if="item.isNew" class="text-yellow text-xs">★</b>
                 </h3>
@@ -112,24 +114,78 @@
               </div>
             </li>
           </ul>
-          <div v-if="cat.custom" class="my-12">
-            <h1>Crea la tua Poke</h1>
-            <nuxt-content :document="poke"></nuxt-content>
+          <div
+            v-if="cat.custom"
+            class="
+              my-12
+              bg-gradient-to-tr
+              from-primary-800
+              to-primary-600
+              text-black
+              px-4
+              py-8
+            "
+          >
+            <h1
+              class="
+                font-bold
+                text-3xl text-center
+                border-t-4 border-b-4 border-purple-100
+                my-8
+                text-white
+                uppercase
+              "
+            >
+              Crea la tua Poke
+            </h1>
+            <nuxt-content :document="poke" class="custom"></nuxt-content>
           </div>
         </div>
       </div>
     </section>
     <wave />
     <section class="container">
-      <div class="block-shadow rounded-md mb-4">
-        <h2 class="text-black font-bold px-4 py-2 text-center">
-          Qualcosa da Bere?
-        </h2>
-      </div>
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-        <div v-for="i in 6" :key="i" class="block-shadow rounded-md text-black">
-          <img :src="birra.image" class="w-full square object-cover" />
-          <h3>{{ birra.name }}</h3>
+      <div
+        v-for="(drink, d) in drinks"
+        :key="d"
+        ref="scrollItem"
+        class="mb-12 scroll-item"
+      >
+        <div class="block-shadow rounded-md mb-4 bg-primary-500">
+          <h2 class="text-black font-bold px-4 py-2 text-center">
+            {{ drink.title }}
+          </h2>
+        </div>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <div
+            v-for="(item, i) in drink.items"
+            :key="i"
+            class="block-shadow rounded-md text-black relative"
+          >
+            <img
+              :src="item.images || '/pattern.png'"
+              class="w-full square object-cover"
+            />
+            <h3 class="w-full text-center">{{ item.title }}</h3>
+            <span
+              v-if="!item.variations"
+              class="
+                absolute
+                top-2
+                right-2
+                bg-purple-500
+                text-white
+                w-12
+                h-12
+                rounded-full
+                flex
+                items-center
+                justify-center
+                shadow-md
+              "
+              >{{ item.price | price }}</span
+            >
+          </div>
         </div>
       </div>
     </section>
@@ -145,20 +201,19 @@ export default {
     return { orari, poke, tags }
   },
   data: () => ({
-    birra: {
-      name: 'Brewdog IPA',
-      description:
-        'Scopri la freschezza di una IPA da gustare con piatti di carne',
-      price: '€5,00',
-      type: 'IPA',
-      vol: '6.5%',
-      size: '0,5l',
-      image: '/birra.png',
+    observable: null,
+    options: {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.1,
     },
   }),
   computed: {
     food() {
       return this.$store.getters.food
+    },
+    drinks() {
+      return this.$store.getters.drinks
     },
     search: {
       get() {
@@ -168,20 +223,73 @@ export default {
         this.$store.commit('SET_SEARCH', value)
       },
     },
+    selectedTag: {
+      get() {
+        return this.$store.state.selectedTag
+      },
+      set(value) {
+        this.$store.commit('SET_TAG', value)
+      },
+    },
+  },
+  watch: {
+    selectedTag(n) {
+      console.log('CAMBIO!!! ', n)
+      this.initObservable()
+    },
+  },
+  mounted() {
+    // this.observer.observe(this.$refs.scrollable)
+    this.initObservable()
   },
   methods: {
+    initObservable() {
+      if (this.observable) {
+        this.observable.disconnect()
+      }
+      // else{
+
+      // }
+      this.observable = new IntersectionObserver(
+        this.animateObservable,
+        this.options
+      )
+      console.log(this.$refs.scrollItem)
+      this.$refs.scrollItem.forEach((item) => {
+        this.observable.observe(item)
+      })
+    },
+    animateObservable(entries) {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          // this.observable = entry.target.id
+          // console.log('Intersecting: ', entry)
+          entry.target.classList.add('animate')
+        } else if (!entry.isVisible) {
+          entry.target.classList.remove('animate')
+        }
+      })
+    },
     filterTag(tag) {
       // TOGGLE
-      if (this.$store.state.selectedTag === tag.slug) {
-        this.$store.commit('SET_TAG', '')
+      if (this.selectedTag === tag.slug) {
+        this.selectedTag = undefined
       } else {
-        this.$store.commit('SET_TAG', tag.slug)
+        this.selectedTag = tag.slug
       }
     },
   },
 }
 </script>
 <style lang="postcss">
+.scroll-item {
+  @apply opacity-0 transition-all duration-500;
+  transform: translateX(150px);
+}
+.scroll-item.animate {
+  @apply opacity-100;
+  transform: translateX(0);
+}
 .nuxt-content strong,
 .nuxt-content b {
   color: inherit !important;
@@ -194,5 +302,15 @@ h1.category {
 }
 .taglist {
   @apply bg-clip-text text-transparent bg-gradient-to-t from-yellow to-purple-300;
+}
+
+.nuxt-content.custom {
+  @apply text-white;
+  h2 {
+    @apply font-serif text-2xl mt-4;
+  }
+  h3 {
+    @apply font-serif text-xl mt-4;
+  }
 }
 </style>

@@ -5,6 +5,9 @@ visible: true
 price: 9.5
 categories:
   - piatti-unici
+tags:
+  - pork
+  - spicy
 order: 6
 ---
 
