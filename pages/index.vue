@@ -16,7 +16,6 @@
           :auto-play="true"
           :autoplay-timeout="300"
           :autoplay-hover-pause="true"
-          :scroll-per-page="false"
           easing="ease-in-out"
         >
           <slide>
@@ -26,9 +25,10 @@
             >
               <div
                 class="w-16 h-16 rounded-full p-2 grid place-items-center"
-                :class="{ 'bg-gray-200': selectedTag == '' }"
+                :class="{ 'bg-gray-200': selectedTag === '' }"
               >
-                <logo :dark="selectedTag == ''" />
+                <i class="mdi mdi-food text-2xl text-red-700"></i>
+                <!-- <logo :dark="selectedTag === ''" /> -->
               </div>
               <p class="text-xs text-center taglist">Tutto</p>
             </button>
@@ -36,7 +36,7 @@
           <slide v-for="(tag, t) in tags" :key="t">
             <button
               class="flex flex-col space-y-4 items-center"
-              @click="filterTag(tag)"
+              @click="filterTag(tag.slug)"
             >
               <div
                 class="w-16 h-16 rounded-full p-2 grid place-items-center"
@@ -63,25 +63,33 @@
             block
             w-full
             p-4
-            rounded-md
             my-12
             bg-transparent
             border-b border-gray-300
             sticky
             top-12
+            transition-all
+            duration-300
+            rounded-md
+            focus:rounded-full focus:bg-primary-500 focus:text-black
           "
           placeholder="Cerca"
         />
       </div>
       <div>
-        <div v-for="(cat, c) in food" :key="c" class="mb-8">
+        <div
+          v-for="(cat, c) in food"
+          :key="c"
+          class="mb-8"
+          data-aos="flip-left"
+        >
           <h1 class="category">{{ cat.title }}</h1>
           <ul class="ml-4 font-light text-lg">
             <li
               v-for="(item, i) in cat.items"
               :key="i"
-              ref="scrollItem"
-              class="flex mt-4 scroll-item"
+              class="flex mt-4"
+              data-aos="flip-down"
             >
               <div class="flex-grow">
                 <h3 class="text-xl font-serif">
@@ -125,6 +133,7 @@
               px-4
               py-8
             "
+            data-aos="fade-up"
           >
             <h1
               class="
@@ -145,12 +154,7 @@
     </section>
     <wave />
     <section class="container">
-      <div
-        v-for="(drink, d) in drinks"
-        :key="d"
-        ref="scrollItem"
-        class="mb-12 scroll-item"
-      >
+      <div v-for="(drink, d) in drinks" :key="d" class="mb-12">
         <div class="block-shadow rounded-md mb-4 bg-primary-500">
           <h2 class="text-black font-bold px-4 py-2 text-center">
             {{ drink.title }}
@@ -160,6 +164,7 @@
           <div
             v-for="(item, i) in drink.items"
             :key="i"
+            data-aos="zoom-in-down"
             class="block-shadow rounded-md text-black relative"
           >
             <img
@@ -233,49 +238,49 @@ export default {
     },
   },
   watch: {
-    selectedTag(n) {
-      console.log('CAMBIO!!! ', n)
-      this.initObservable()
+    selectedTag(n, o) {
+      // this.initObservable()
     },
   },
   mounted() {
     // this.observer.observe(this.$refs.scrollable)
-    this.initObservable()
+    // this.initObservable()
   },
   methods: {
-    initObservable() {
-      if (this.observable) {
-        this.observable.disconnect()
-      }
-      // else{
+    // initObservable() {
+    //   if (this.observable) {
+    //     this.observable.disconnect()
+    //   }
+    //   this.observable = new IntersectionObserver(
+    //     this.animateObservable,
+    //     this.options
+    //   )
 
-      // }
-      this.observable = new IntersectionObserver(
-        this.animateObservable,
-        this.options
-      )
-      console.log(this.$refs.scrollItem)
-      this.$refs.scrollItem.forEach((item) => {
-        this.observable.observe(item)
-      })
-    },
-    animateObservable(entries) {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          // this.observable = entry.target.id
-          // console.log('Intersecting: ', entry)
-          entry.target.classList.add('animate')
-        } else if (!entry.isVisible) {
-          entry.target.classList.remove('animate')
-        }
-      })
-    },
+    //   this.$refs.scrollItem.forEach((item) => {
+    //     item.classList.add('animate')
+    //     console.log('OBSERVE', item.classList)
+
+    //     this.observable.observe(item)
+    //   })
+    // },
+    // animateObservable(entries) {
+    //   entries.forEach((entry) => {
+    //     if (entry.isIntersecting) {
+    //       // this.observable = entry.target.id
+    //       // console.log('Intersecting: ', entry)
+    //       entry.target.classList.add('animate')
+    //     } else if (!entry.isVisible) {
+    //       entry.target.classList.remove('animate')
+    //     }
+    //   })
+    // },
     filterTag(tag) {
       // TOGGLE
-      if (this.selectedTag === tag.slug) {
-        this.selectedTag = undefined
+
+      if (this.selectedTag === tag) {
+        this.selectedTag = ''
       } else {
-        this.selectedTag = tag.slug
+        this.selectedTag = tag
       }
     },
   },

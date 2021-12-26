@@ -149,50 +149,22 @@ export default {
       time: { required },
       guests: { required },
       sala: { required },
-      note: { required },
       phone: { required },
       email: { required, email },
     },
   },
-  async mounted() {
-    const _at = await this.airtable('reservation').select().all()
-    console.log('Airtable says ', _at)
-  },
+
   methods: {
     onSubmit() {
       try {
-        // const config = {
-        //   method: 'POST',
-        //   url: process.env.BASE_URL + '.netlify/functions/reservation',
-        //   headers: { accept: 'Accept: application/json' },
-        // }
-        // const _res = await Axios({
-        //   method: 'post',
-        //   url: 'http://localhost:9999/.netlify/functions/reservation',
-        //   data: {
-        //     date: this.dateToday,
-        //     time: this.time,
-        //     guest: this.guest,
-        //     room: this.room,
-        //     note: this.note,
-        //     phone: this.phone,
-        //     from: this.from,
-        //   },
-        // })
-        // const _res = await Axios(config)
-        // this.form.date = new Intl.DateTimeFormat('it-IT').format(
-        //   Date(this.form.date)
-        // )
-        // DateTime.fromRFC2822(this.form.date).toFormat(
-        // 'dd/MM/yyyy'
-        // )
         const _d = [{ fields: { ...this.form } }]
-        console.log('the form', _d)
+
         this.airtable('reservation').create(_d, (err, rec) => {
           if (err) {
-            console.log('error', err)
+            this.$router.push('/prenota/error')
           }
-          console.log('record created', rec)
+
+          this.$router.push('/prenota/success')
         })
         // console.log('Response ', _res)
       } catch (e) {

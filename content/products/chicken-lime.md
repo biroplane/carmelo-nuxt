@@ -5,6 +5,8 @@ visible: true
 price: 8
 categories:
   - burrito
+tags:
+  - chicken
 order: 2
 ---
 

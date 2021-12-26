@@ -20,7 +20,12 @@
           <header
             class="w-full flex justify-between items-center fixed px-6 py-4"
           >
-            <h1 class="text-2xl font-bold">Carmelo</h1>
+            <div class="">
+              <h1 class="text-xl font-bold">CARMELO</h1>
+              <h2 class="-mt-1 text-xs font-light tracking-[0.3em]">
+                SOUL KITCHEN
+              </h2>
+            </div>
             <button
               class="
                 block-shadow
@@ -35,11 +40,20 @@
               <i class="mdi mdi-close text-2xl text-primary-500"></i>
             </button>
           </header>
-          <ul class="mt-16 overflow-y-auto h-full px-6 pb-12 text-xl">
-            <li>
-              <nuxt-link to="/" @click.native="isOpen = false">Menu</nuxt-link>
+          <ul class="mt-24 overflow-y-auto h-full px-6 pb-12 text-xl flex-grow">
+            <li v-for="(menu, m) in nav" :key="m" class="mb-2">
+              <nuxt-link
+                :to="menu.link"
+                class="flex space-x-4 py-4"
+                active-class="bg-white bg-opacity-25"
+                exact
+                @click.native="isOpen = false"
+              >
+                <img :src="menu.icon" :alt="menu.label" class="w-8 h-8" />
+                <p>{{ menu.label }}</p>
+              </nuxt-link>
             </li>
-            <li>
+            <!-- <li>
               <nuxt-link to="/prenota" @click.native="isOpen = false"
                 >Prenota</nuxt-link
               >
@@ -48,7 +62,7 @@
               <nuxt-link to="/contatti" @click.native="isOpen = false"
                 >Contatti</nuxt-link
               >
-            </li>
+            </li> -->
             <!-- <li
               v-for="(cat, c) in $store.getters.food"
               :key="c"
@@ -78,7 +92,14 @@ export default {
       default: false,
     },
   },
-  data: () => ({ isOpen: false }),
+  data: () => ({
+    isOpen: false,
+    nav: [
+      { label: 'Menu', link: '/', icon: '/menu.png' },
+      { label: 'Prenota', link: '/prenota', icon: '/prenota.png' },
+      { label: 'Contatti', link: '/contatti', icon: '/whatsapp.png' },
+    ],
+  }),
   computed: {
     newVal: {
       get() {

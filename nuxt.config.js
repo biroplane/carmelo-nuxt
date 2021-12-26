@@ -29,11 +29,11 @@ export default {
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: ['~/assets/app.pcss', 'aos/dist/aos.css'],
+  css: ['~/assets/app.pcss'],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
-    // { src: '~/plugins/aos', mode: 'client' },
+    { src: '~/plugins/aos', mode: 'client' },
     { src: '~/plugins/vue-carousel', mode: 'client' },
     { src: '~/plugins/v-calendar', mode: 'client' },
     '~/plugins/filters'

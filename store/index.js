@@ -5,7 +5,7 @@ export const state = () => ({
   cart: [],
   total: 0,
   search: '',
-  selectedTag: undefined,
+  selectedTag: '',
   foodCategories: [
     'passatempo',
     'fried-snack',
@@ -38,7 +38,7 @@ export const getters = {
   products: (state) =>
     state.products
       .filter((product) => {
-        if (!state.selectedTag) return true
+        if (state.selectedTag === '') return true
         return product.tags ? product.tags.includes(state.selectedTag) : false
       })
       .filter((product) =>
