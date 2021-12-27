@@ -5,6 +5,8 @@ visible: true
 price: 6.5
 categories:
   - fried-snack
+tags:
+  - pork
 order: 6
 ---
 

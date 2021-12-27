@@ -1,11 +1,13 @@
 ---
+excerpt: ""
 title: Perle Nere
 isNew: true
 visible: true
-excerpt: ''
 price: 4.5
 categories:
   - veg-snack
+tags:
+  - veg
 order: 2
 ---
 

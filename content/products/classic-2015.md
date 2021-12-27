@@ -5,6 +5,8 @@ visible: true
 price: 6
 categories:
   - burgers
+tags:
+  - beef
 order: 1
 ---
 

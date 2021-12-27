@@ -5,6 +5,8 @@ visible: true
 price: 9
 categories:
   - piatti-unici
+tags:
+  - chicken
 order: 4
 ---
 

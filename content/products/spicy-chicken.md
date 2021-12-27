@@ -5,6 +5,9 @@ visible: true
 price: 12
 categories:
   - piatti-unici
+tags:
+  - spicy
+  - chicken
 order: 2
 ---
 

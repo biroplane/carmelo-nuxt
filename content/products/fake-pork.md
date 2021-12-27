@@ -5,6 +5,8 @@ visible: true
 price: 9
 categories:
   - fake-burger
+tags:
+  - veg
 order: 3
 ---
 

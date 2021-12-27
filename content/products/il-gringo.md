@@ -5,6 +5,8 @@ visible: true
 price: 22
 categories:
   - piatti-unici
+tags:
+  - pork
 order: 7
 ---
 

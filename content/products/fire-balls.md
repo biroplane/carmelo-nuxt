@@ -5,6 +5,8 @@ visible: true
 price: 3.5
 categories:
   - veg-snack
+tags:
+  - spicy
 order: 1
 ---
 

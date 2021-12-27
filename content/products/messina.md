@@ -10,6 +10,7 @@ variations:
       price: 4.5
 categories:
   - spina
+images: /img/messina.png
 order: 1
 ---
 Chiara leggera

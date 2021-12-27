@@ -24,9 +24,10 @@
     "nuxt": "^2.15.7",
     "nuxt-gmaps": "^1.2.10",
     "nuxtjs-mdi-font": "^1.0.2",
+    "swiper": "^5.4.5",
     "v-calendar": "^2.3.4",
     "vue-animate-onscroll": "^1.0.8",
-    "vue-carousel": "^0.18.0",
+    "vue-awesome-swiper": "^4.1.1",
     "vue-lottie": "^0.2.1",
     "vuelidate": "^0.7.7"
   },

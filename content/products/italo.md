@@ -5,6 +5,8 @@ visible: true
 price: 11.5
 categories:
   - soul-burger
+tags:
+  - beef
 order: 2
 ---
 

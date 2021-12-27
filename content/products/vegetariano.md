@@ -5,6 +5,9 @@ visible: true
 price: 6
 categories:
   - toast-chips
+tags:
+  - veg
+  - lactose-free
 order: 4
 ---
 

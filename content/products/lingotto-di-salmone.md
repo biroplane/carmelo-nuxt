@@ -5,6 +5,8 @@ visible: true
 price: 12.5
 categories:
   - piatti-unici
+tags:
+  - fish
 order: 8
 ---
 

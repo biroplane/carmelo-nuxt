@@ -5,6 +5,8 @@ visible: true
 price: 3.5
 categories:
   - veg-snack
+tags:
+  - veg
 order: 3
 ---
 

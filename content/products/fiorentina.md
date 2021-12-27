@@ -2,10 +2,11 @@
 title: Fiorentina
 isNew: true
 visible: true
-
 price: 29
 categories:
   - ferro-e-fuoco
+tags:
+  - beef
 order: 4
 ---
 

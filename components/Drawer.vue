@@ -40,7 +40,7 @@
               <i class="mdi mdi-close text-2xl text-primary-500"></i>
             </button>
           </header>
-          <ul class="mt-24 overflow-y-auto h-full px-6 pb-12 text-xl flex-grow">
+          <ul class="mt-24 h-full px-6 pb-12 text-xl flex-grow">
             <li v-for="(menu, m) in nav" :key="m" class="mb-2">
               <nuxt-link
                 :to="menu.link"

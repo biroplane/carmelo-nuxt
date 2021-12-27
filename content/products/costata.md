@@ -2,10 +2,11 @@
 title: Costata
 isNew: true
 visible: true
-
 price: 12
 categories:
   - ferro-e-fuoco
+tags:
+  - beef
 order: 3
 ---
 
