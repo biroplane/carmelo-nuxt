@@ -5,6 +5,9 @@ visible: true
 price: 7.5
 categories:
   - toast-chips
+tags:
+  - fish
+  - spicy
 order: 2
 ---
 

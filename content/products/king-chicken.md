@@ -5,6 +5,8 @@ visible: true
 price: 9.8
 categories:
   - soul-burger
+tags:
+  - chicken
 order: 4
 ---
 

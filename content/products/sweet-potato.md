@@ -10,6 +10,9 @@ variations:
       price: 6
 categories:
   - fried-snack
+tags:
+  - veg
+  - lactose-free
 order: 2
 ---
 

@@ -5,6 +5,8 @@ visible: true
 price: 11.5
 categories:
   - piatti-unici
+tags:
+  - chicken
 order: 1
 ---
 

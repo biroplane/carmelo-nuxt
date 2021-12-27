@@ -5,6 +5,8 @@ visible: true
 price: 11
 categories:
   - ferro-e-fuoco
+tags:
+  - beef
 order: 1
 ---
 

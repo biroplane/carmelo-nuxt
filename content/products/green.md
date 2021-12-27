@@ -5,6 +5,8 @@ visible: true
 price: 7
 categories:
   - burrito
+tags:
+  - veg
 order: 3
 ---
 

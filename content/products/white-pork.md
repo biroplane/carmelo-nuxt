@@ -5,6 +5,9 @@ visible: true
 price: 7.5
 categories:
   - burrito
+tags:
+  - pork
+  - spicy
 order: 1
 ---
 

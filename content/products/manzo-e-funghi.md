@@ -5,6 +5,8 @@ visible: true
 price: 12
 categories:
   - piatti-unici
+tags:
+  - beef
 order: 3
 ---
 

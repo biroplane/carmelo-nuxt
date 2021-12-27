@@ -10,15 +10,8 @@
     <aside class="container">
       <ClientOnly>
         <h2 class="mb-8 text-center font-bold">Di Cosa hai voglia oggi?</h2>
-        <carousel
-          :per-page="4"
-          :pagination-enabled="false"
-          :auto-play="true"
-          :autoplay-timeout="300"
-          :autoplay-hover-pause="true"
-          easing="ease-in-out"
-        >
-          <slide>
+        <swiper class="swiper" :options="swiperOption">
+          <swiper-slide>
             <button
               class="flex flex-col space-y-4 items-center"
               @click="filterTag('')"
@@ -28,34 +21,37 @@
                 :class="{ 'bg-gray-200': selectedTag === '' }"
               >
                 <i class="mdi mdi-food text-2xl text-red-700"></i>
-                <!-- <logo :dark="selectedTag === ''" /> -->
               </div>
               <p class="text-xs text-center taglist">Tutto</p>
             </button>
-          </slide>
-          <slide v-for="(tag, t) in tags" :key="t">
-            <button
-              class="flex flex-col space-y-4 items-center"
-              @click="filterTag(tag.slug)"
-            >
-              <div
-                class="w-16 h-16 rounded-full p-2 grid place-items-center"
-                :class="{ 'bg-gray-200': $store.state.selectedTag == tag.slug }"
+          </swiper-slide>
+          <swiper-slide v-for="(tag, t) in tags" :key="t">
+            <div class="w-full flex justify-center">
+              <button
+                class="flex flex-col space-y-4 items-center"
+                @click="filterTag(tag.slug)"
               >
-                <img
-                  :src="tag.images"
-                  :alt="tag.title"
-                  class="w-full h-12 object-contain"
-                />
-              </div>
-              <p class="text-xs text-center taglist">{{ tag.title }}</p>
-            </button>
-          </slide>
-        </carousel>
+                <div
+                  class="w-16 h-16 rounded-full p-2 grid place-items-center"
+                  :class="{
+                    'bg-gray-200': $store.state.selectedTag == tag.slug,
+                  }"
+                >
+                  <img
+                    :src="tag.images"
+                    :alt="tag.title"
+                    class="w-full h-12 object-contain"
+                  />
+                </div>
+                <p class="text-xs text-center taglist">{{ tag.title }}</p>
+              </button>
+            </div>
+          </swiper-slide>
+        </swiper>
       </ClientOnly>
     </aside>
     <section class="z-20 w-full container">
-      <div class="relative h-20 overflow-y-visible">
+      <div class="relative h-20">
         <input
           v-model="search"
           type="search"
@@ -198,7 +194,13 @@
 </template>
 
 <script>
+import 'swiper/css/swiper.css'
+import { Swiper, SwiperSlide } from 'vue-awesome-swiper'
 export default {
+  components: {
+    Swiper,
+    SwiperSlide,
+  },
   async asyncData({ $content }) {
     const orari = await $content('pages/orari').fetch()
     const poke = await $content('custom/pokè').fetch()
@@ -207,10 +209,20 @@ export default {
   },
   data: () => ({
     observable: null,
-    options: {
-      root: null,
-      rootMargin: '0px',
-      threshold: 0.1,
+    swiperOption: {
+      slidesPerView: 4,
+      spaceBetween: 30,
+      autoplay: {
+        delay: 5000,
+        disableOnInteraction: true,
+        pauseOnMouseEnter: true,
+      },
+      grabCursor: true,
+
+      // pagination: {
+      //   el: '.swiper-pagination',
+      //   clickable: true,
+      // },
     },
   }),
   computed: {
@@ -237,43 +249,8 @@ export default {
       },
     },
   },
-  watch: {
-    selectedTag(n, o) {
-      // this.initObservable()
-    },
-  },
-  mounted() {
-    // this.observer.observe(this.$refs.scrollable)
-    // this.initObservable()
-  },
+
   methods: {
-    // initObservable() {
-    //   if (this.observable) {
-    //     this.observable.disconnect()
-    //   }
-    //   this.observable = new IntersectionObserver(
-    //     this.animateObservable,
-    //     this.options
-    //   )
-
-    //   this.$refs.scrollItem.forEach((item) => {
-    //     item.classList.add('animate')
-    //     console.log('OBSERVE', item.classList)
-
-    //     this.observable.observe(item)
-    //   })
-    // },
-    // animateObservable(entries) {
-    //   entries.forEach((entry) => {
-    //     if (entry.isIntersecting) {
-    //       // this.observable = entry.target.id
-    //       // console.log('Intersecting: ', entry)
-    //       entry.target.classList.add('animate')
-    //     } else if (!entry.isVisible) {
-    //       entry.target.classList.remove('animate')
-    //     }
-    //   })
-    // },
     filterTag(tag) {
       // TOGGLE
 

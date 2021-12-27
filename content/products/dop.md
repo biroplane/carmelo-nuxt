@@ -5,6 +5,8 @@ visible: true
 price: 7.5
 categories:
   - toast-chips
+tags:
+  - pork
 order: 1
 ---
 

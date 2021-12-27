@@ -10,6 +10,8 @@ variations:
       price: 8.5
 categories:
   - fried-snack
+tags:
+  - chicken
 order: 4
 ---
 

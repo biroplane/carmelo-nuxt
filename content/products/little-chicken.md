@@ -5,6 +5,8 @@ visible: true
 price: 6.8
 categories:
   - burgers
+tags:
+  - chicken
 order: 3
 ---
 

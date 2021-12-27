@@ -5,6 +5,9 @@ visible: true
 price: 6.8
 categories:
   - burgers
+tags:
+  - pork
+  - spicy
 order: 3
 ---
 
