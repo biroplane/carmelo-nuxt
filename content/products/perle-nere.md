@@ -5,7 +5,7 @@ isNew: true
 visible: true
 price: 4.5
 categories:
-  - veg-snack
+  - fried-snack
 tags:
   - veg
 order: 2
