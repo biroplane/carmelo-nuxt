@@ -2,7 +2,13 @@
 title: Onion Rings
 isNew: false
 visible: true
-price: 3.5
+price: ""
+variations:
+  variants:
+    - variation: M
+      price: 4
+    - variation: XL
+      price: 6
 categories:
   - veg-snack
 tags:
