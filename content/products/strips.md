@@ -12,7 +12,7 @@ categories:
   - fried-snack
 tags:
   - chicken
-order: 4
+order: 8
 ---
 
 Petto di pollo tagliato a stick e panato

@@ -1,6 +1,6 @@
 ---
 title: Marocco
-isNew: true
+isNew: false
 visible: true
 price: 7
 categories:

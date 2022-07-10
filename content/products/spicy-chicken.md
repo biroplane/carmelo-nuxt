@@ -1,7 +1,7 @@
 ---
 title: Spicy Chicken
 isNew: true
-visible: true
+visible: false
 price: 12
 categories:
   - piatti-unici

@@ -1,8 +1,8 @@
 ---
 title: Dop
-isNew: false
+isNew: true
 visible: true
-price: 7.5
+price: 8.5
 categories:
   - toast-chips
 tags:
@@ -10,4 +10,4 @@ tags:
 order: 1
 ---
 
-Crudo di Parma, mozzarella di Bufala campana e maionese al tartufo
+Crudo di Parma, stracciatella al tartufo e pomodoro

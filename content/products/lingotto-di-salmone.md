@@ -1,13 +1,13 @@
 ---
 title: Lingotto di Salmone
-isNew: false
+isNew: true
 visible: true
 price: 12.5
 categories:
   - piatti-unici
 tags:
   - fish
-order: 8
+order: 6
 ---
 
-Lingotto di salmone servito con patate al forno, riso basmati e salsa al curry
+Lingotto di salmone al miele e mandorle servito con riso basmati e flan di patate e spinaci

@@ -1,13 +1,13 @@
 ---
 title: Costata
-isNew: true
+isNew: false
 visible: true
-price: 12
+price: 18
 categories:
-  - ferro-e-fuoco
+  - scottona
 tags:
   - beef
-order: 3
+order: 2
 ---
 
-Costata di Scottona con contorno di insalatina classica e patate al forno con buccia **250/300GR**
+Costata di Scottona con contorno di insalatina classica e patate al forno con buccia **250**

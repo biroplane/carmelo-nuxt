@@ -2,7 +2,7 @@
 title: Onion Rings
 isNew: false
 visible: true
-price: ""
+price: ''
 variations:
   variants:
     - variation: M
@@ -14,7 +14,7 @@ categories:
 tags:
   - veg
   - lactose-free
-order: 4
+order: 5
 ---
 
 Anelli di cipolla di tropea pastellati

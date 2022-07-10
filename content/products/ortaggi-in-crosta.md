@@ -7,5 +7,7 @@ categories:
   - fried-snack
 tags:
   - veg
+order: 4
 ---
+
 Fiore di zucca in crosta, frittelline ricotta zucchine e menta e pomodorini in crosta

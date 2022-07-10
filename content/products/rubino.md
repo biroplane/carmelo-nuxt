@@ -1,6 +1,6 @@
 ---
 title: Rubino
-isNew: false
+isNew: true
 visible: true
 price: 13
 categories:
@@ -9,4 +9,5 @@ tags:
   - fish
 order: 2
 ---
-Tartare di Tonno Rosso, riso basmati e venere, quinoa, chips di zucchine, edamame, mandorle, ciliegini al cumino, semi di sesamo e maionese al lime
+
+Tartare di Tonno Rosso, riso basmati e venere, farro, chips di patata dolce, avocado, barattino, mandorle, barbabietola, ciliegino in crosta, semi di sesamo e salsa teriyaki

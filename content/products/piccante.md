@@ -1,7 +1,7 @@
 ---
 title: Piccante
 isNew: true
-visible: true
+visible: false
 price: 7
 categories:
   - toast-chips

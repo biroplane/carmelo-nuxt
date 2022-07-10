@@ -7,6 +7,7 @@ categories:
   - fried-snack
 tags:
   - fish
-order: 99
+order: 11
 ---
+
 Gamberi in crosta di panko (6PZ)

@@ -1,7 +1,7 @@
 ---
 title: Green
 isNew: true
-visible: true
+visible: false
 price: 7
 categories:
   - burrito

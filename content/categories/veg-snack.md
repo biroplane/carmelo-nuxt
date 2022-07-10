@@ -1,7 +1,7 @@
 ---
 title: Veg snack
 featured: false
-visible: true
+visible: false
 description: VEG SNACK
 order: 3
 ---

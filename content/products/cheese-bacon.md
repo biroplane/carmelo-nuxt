@@ -2,7 +2,7 @@
 title: Cheese & Bacon
 isNew: false
 visible: true
-price: 6.8
+price: 7
 categories:
   - burgers
 tags:

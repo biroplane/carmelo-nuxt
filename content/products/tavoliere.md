@@ -2,11 +2,12 @@
 title: Tavoliere
 isNew: true
 visible: true
-price: 5
+price: 9
 categories:
   - healthy-fresh
 tags:
-  - veg
-order: 3
+  - fish
+order: 4
 ---
-Funghi cardoncelli, senape selvatica, friariellli di campo, caponata e patate al forno con buccia
+
+Fiori di zucca in crosta, parmigiana Nuggets, stracciatella e pistacchio, flan di patate e spinaci con tentacoli di polpo
