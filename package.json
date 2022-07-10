@@ -29,6 +29,7 @@
     "vue-animate-onscroll": "^1.0.8",
     "vue-awesome-swiper": "^4.1.1",
     "vue-lottie": "^0.2.1",
+    "vue-swipe-actions": "^2.0.0-beta.20",
     "vuelidate": "^0.7.7"
   },
   "devDependencies": {
@@ -41,6 +42,7 @@
     "eslint-plugin-nuxt": "^2.0.0",
     "eslint-plugin-vue": "^7.12.1",
     "postcss": "^8.3.5",
-    "prettier": "^2.3.2"
+    "prettier": "^2.3.2",
+    "qs": "^6.10.3"
   }
 }

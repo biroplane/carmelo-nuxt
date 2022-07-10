@@ -1,3 +1,8 @@
+import { resolve } from 'path'
+const vueCompositionAPIFullpath = resolve(
+  './node_modules/@vue/composition-api/dist/vue-composition-api.mjs'
+)
+
 export default {
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
   ssr: true,
@@ -15,7 +20,7 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'carmelo-nuxt',
+    title: 'Carmelo - Soul Kitchen',
     htmlAttrs: {
       lang: 'it'
     },
@@ -36,7 +41,8 @@ export default {
     { src: '~/plugins/aos', mode: 'client' },
     { src: '~/plugins/vue-carousel', mode: 'client' },
     { src: '~/plugins/v-calendar', mode: 'client' },
-    '~/plugins/filters'
+    '~/plugins/filters',
+    '~/plugins/swipable.client.js'
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -88,6 +94,19 @@ export default {
       plugins: {
         'postcss-nested': {}
       }
+    },
+    alias: {
+      '@vue/composition-api$':
+        '@vue/composition-api/dist/vue-composition-api.mjs',
+      '@vue/composition-api/dist/vue-composition-api.mjs':
+        vueCompositionAPIFullpath
+    },
+    extend(config) {
+      config.module.rules.push({
+        test: /\.mjs$/,
+        include: /node_modules/,
+        type: 'javascript/auto'
+      })
     }
   }
 }

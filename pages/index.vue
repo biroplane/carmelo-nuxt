@@ -5,6 +5,7 @@
         <nuxt-content :document="orari" />
       </div>
     </hero>
+    <swipe-demo />
     <!-- <pre>{{ $store.getters.byCategory }}</pre> -->
     <!-- <wave /> -->
     <aside class="container">
@@ -73,79 +74,8 @@
         />
       </div>
       <div>
-        <div
-          v-for="(cat, c) in food"
-          :key="c"
-          class="mb-8"
-          data-aos="flip-left"
-        >
-          <h1 class="category">{{ cat.title }}</h1>
-          <ul class="ml-4 font-light text-lg">
-            <li
-              v-for="(item, i) in cat.items"
-              :key="i"
-              class="flex mt-4"
-              data-aos="flip-down"
-            >
-              <div class="flex-grow">
-                <h3 class="text-xl font-serif">
-                  {{ item.title }}
-                  <b v-if="item.isNew" class="text-yellow text-xs">★</b>
-                </h3>
-                <!-- <p class="font-body text-xs text-gray-300">
-                  {{ item.description }}
-                </p> -->
-                <nuxt-content
-                  :document="item"
-                  class="prose prose-sm font-body text-gray-300"
-                />
-              </div>
-              <div class="w-auto flex justify-end">
-                <ul
-                  v-if="item.variations"
-                  class="flex space-x-2 flex-nowrap pricelists"
-                >
-                  <li
-                    v-for="(variant, v) in item.variations.variants"
-                    :key="v"
-                    class="whitespace-nowrap"
-                  >
-                    {{ variant.price | money }}
-                  </li>
-                </ul>
-
-                <span v-else>{{ item.price | money }}</span>
-              </div>
-            </li>
-          </ul>
-          <div
-            v-if="cat.custom"
-            class="
-              my-12
-              bg-gradient-to-tr
-              from-primary-800
-              to-primary-600
-              text-black
-              px-4
-              py-8
-            "
-            data-aos="fade-up"
-          >
-            <h1
-              class="
-                font-bold
-                text-3xl text-center
-                border-t-4 border-b-4 border-purple-100
-                my-8
-                text-white
-                uppercase
-              "
-            >
-              Crea la tua Poke
-            </h1>
-            <nuxt-content :document="poke" class="custom"></nuxt-content>
-          </div>
-        </div>
+        <list-group v-for="(cat, c) in food" :key="c" :list="cat" :poke="poke">
+        </list-group>
       </div>
     </section>
     <wave />
@@ -160,7 +90,6 @@
           <div
             v-for="(item, i) in drink.items"
             :key="i"
-            data-aos="zoom-in-down"
             class="block-shadow rounded-md text-black relative"
           >
             <img
@@ -194,12 +123,18 @@
 </template>
 
 <script>
+/* eslint-disable vue/no-unused-components */
+/* eslint-disable vue/no-unused-vars */
+
 import 'swiper/css/swiper.css'
 import { Swiper, SwiperSlide } from 'vue-awesome-swiper'
+import SwipeDemo from '~/components/SwipeDemo.vue'
+
 export default {
   components: {
     Swiper,
     SwiperSlide,
+    SwipeDemo,
   },
   async asyncData({ $content }) {
     const orari = await $content('pages/orari').fetch()
@@ -208,6 +143,8 @@ export default {
     return { orari, poke, tags }
   },
   data: () => ({
+    isSwiping: null,
+    direction: null,
     observable: null,
     swiperOption: {
       slidesPerView: 4,
@@ -223,6 +160,52 @@ export default {
       //   el: '.swiper-pagination',
       //   clickable: true,
       // },
+      enabled: true,
+      page: 0,
+      revealed: {},
+      lastEventDescription: '',
+      mockSwipeList: [
+        [
+          {
+            id: 'a',
+            title: 'Some title',
+            description: 'some description',
+            disabled: false,
+          },
+          {
+            id: 'b',
+            title: 'Some title',
+            description: 'some description',
+            disabled: false,
+          },
+          {
+            id: 'c',
+            title: 'Some title',
+            description: 'some description',
+            disabled: false,
+          },
+        ],
+        [
+          {
+            id: 'd',
+            title: 'Some title',
+            description: 'some description',
+            disabled: false,
+          },
+          {
+            id: 'e',
+            title: 'Some title',
+            description: 'some description',
+            disabled: false,
+          },
+          {
+            id: 'f',
+            title: 'Some title',
+            description: 'some description',
+            disabled: false,
+          },
+        ],
+      ],
     },
   }),
   computed: {
@@ -259,6 +242,9 @@ export default {
       } else {
         this.selectedTag = tag
       }
+    },
+    itemClick(e) {
+      console.log('ITEM CLICK', e)
     },
   },
 }

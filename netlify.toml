@@ -1,0 +1,9 @@
+[build]
+  functions = "functions"
+  publish = "dist"
+  command = "npm run generate"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
