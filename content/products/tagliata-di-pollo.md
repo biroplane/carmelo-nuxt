@@ -7,7 +7,7 @@ categories:
   - piatti-unici
 tags:
   - chicken
-order: 4
+order: 1
 ---
 
 Tagliata di Pollo con verdure al vapore e patate al forno

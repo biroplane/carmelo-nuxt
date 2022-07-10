@@ -1,12 +1,13 @@
 ---
 title: Quartiermastro
-isNew: false
+isNew: true
 visible: true
-price: 11.5
+price: 12
 categories:
   - fish-burger
 tags:
   - fish
 order: 3
 ---
-Pane alla Birra, Tartare di tonno rosso, mandorle, chips di salvia, pomodori sott'olio, insalata riccia e mousse di ricotta
+
+Pane tartaruga alla curcuma , Tartare di tonno rosso, in salsa teriyaki, stracciatella al tartufo , barattino, fiore di zucca e valeriana

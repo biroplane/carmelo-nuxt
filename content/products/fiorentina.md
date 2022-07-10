@@ -1,13 +1,13 @@
 ---
 title: Fiorentina
-isNew: true
+isNew: false
 visible: true
 price: 29
 categories:
-  - ferro-e-fuoco
+  - scottona
 tags:
   - beef
-order: 4
+order: 3
 ---
 
-Fiorentina di Scottona con contorno di insalatina classica e patate al forno con buccia **550GR**
+Fiorentina di Scottona con contorno di insalatina classica e patate al forno con buccia **500GR**

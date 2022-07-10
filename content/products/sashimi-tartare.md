@@ -1,7 +1,7 @@
 ---
 title: Sashimi / Tartare
 isNew: false
-visible: true
+visible: false
 price: 9.5
 categories:
   - healthy-fresh

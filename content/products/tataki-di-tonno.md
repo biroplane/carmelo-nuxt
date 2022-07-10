@@ -1,7 +1,7 @@
 ---
 title: Tataki di Tonno
 isNew: false
-visible: true
+visible: false
 price: 12.5
 categories:
   - piatti-unici

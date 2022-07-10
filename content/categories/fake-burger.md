@@ -1,7 +1,7 @@
 ---
-title: Fake Burger
+title: Veg Burger
 featured: false
 visible: true
-description: Fake Burger
+description: Veg Burger
 order: 10
 ---

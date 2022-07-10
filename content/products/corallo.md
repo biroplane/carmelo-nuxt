@@ -1,6 +1,6 @@
 ---
 title: Corallo
-isNew: false
+isNew: true
 visible: true
 price: 12
 categories:
@@ -9,4 +9,5 @@ tags:
   - fish
 order: 1
 ---
-Tartare di Salmone, riso basmati e venere, carote, alga wakame, avocado, cetrioli, granella di pistacchio, barbabietole al wasabi e maionese alla barbabietola
+
+Tartare di Salmone, riso basmati e venere, farro, alga wakame, mela, chips di platano, fiori di zucca in crosta, pistacchio e maionese alla barbabietola

@@ -1,7 +1,7 @@
 ---
 title: Indian Chicken
 isNew: true
-visible: true
+visible: false
 price: 11.5
 categories:
   - piatti-unici

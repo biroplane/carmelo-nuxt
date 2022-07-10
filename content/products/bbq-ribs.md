@@ -8,7 +8,7 @@ categories:
 tags:
   - pork
   - spicy
-order: 6
+order: 4
 ---
 
 Costine di maiale alla Bbq ottenute con una preparazione **di 24h tra marinatura e cottura a vapore**, saporite e gustose, da provare!

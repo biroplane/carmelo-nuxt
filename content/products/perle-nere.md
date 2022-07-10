@@ -1,5 +1,5 @@
 ---
-excerpt: ""
+excerpt: ''
 title: Perle Nere
 isNew: true
 visible: true
@@ -8,7 +8,7 @@ categories:
   - fried-snack
 tags:
   - veg
-order: 2
+order: 6
 ---
 
 Perle di mozzarella con panatura al tartufo

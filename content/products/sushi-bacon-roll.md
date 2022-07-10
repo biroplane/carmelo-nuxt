@@ -7,7 +7,7 @@ categories:
   - fried-snack
 tags:
   - pork
-order: 6
+order: 10
 ---
 
 Roll di carne avvolto nel bacon con cuore di cheddar

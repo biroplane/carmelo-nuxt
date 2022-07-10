@@ -1,12 +1,13 @@
 ---
 title: Nostromo
-isNew: false
+isNew: true
 visible: true
-price: 11
+price: 12
 categories:
   - fish-burger
 tags:
   - fish
 order: 2
 ---
-Pane alla Birra, Tartare di Salmone, rucola, mozzarella di Bufala, ciliegino fritto, granella di pistacchio e crema di avocado
+
+Pane tartaruga, Tartare di Salmone, stracciatella, frittelle zucchine, ricotta e menta, valeriana, granella di pistacchio

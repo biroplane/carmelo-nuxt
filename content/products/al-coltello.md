@@ -4,7 +4,7 @@ isNew: false
 visible: true
 price: 14
 categories:
-  - ferro-e-fuoco
+  - scottona
 tags:
   - beef
 order: 2

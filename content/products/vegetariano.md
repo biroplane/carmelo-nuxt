@@ -1,7 +1,7 @@
 ---
 title: Vegetariano
 isNew: false
-visible: true
+visible: false
 price: 6
 categories:
   - toast-chips

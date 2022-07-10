@@ -2,7 +2,7 @@
 title: Fake
 isNew: false
 visible: true
-price: 9
+price: 9.5
 categories:
   - fake-burger
 tags:

@@ -1,7 +1,7 @@
 ---
 title: Guancia di manzo
 isNew: true
-visible: true
+visible: false
 price: 11
 categories:
   - ferro-e-fuoco

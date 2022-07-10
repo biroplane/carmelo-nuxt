@@ -1,7 +1,7 @@
 ---
 title: Passatempo
 featured: false
-visible: true
+visible: false
 description: Passatempo
 order: 1
 ---
